@@ -10,6 +10,11 @@ namespace Exchange {
         bestBuyPrice = 0;
     }
 
+    template<Side _side> bool limitExists(uint_fast64_t limit)
+    {
+        return limitExists<_side>(limit);
+    }
+
     template<>
     bool OrderBook::limitExists<Side::Buy>(uint_fast64_t limit) {
         return (buySideIteratorsToLimits.find(limit) == buySideIteratorsToLimits.end());
@@ -18,6 +23,11 @@ namespace Exchange {
     template<>
     bool OrderBook::limitExists<Side::Sell>(uint_fast64_t limit) {
         return (sellSideIteratorsToLimits.find(limit) == sellSideIteratorsToLimits.end());
+    }
+
+    template<Side _side> void AddOrder(const Order& newOrder)
+    {
+        AddOrder<_side>(newOrder);
     }
 
     template<>
@@ -51,6 +61,10 @@ namespace Exchange {
             buySideIteratorsToOrders.emplace(newOrder.getId(), limit->second->second.addOrder(newOrder));
         }
         bestBuyPrice = buySideLimits.begin()->first;
+    }
+
+    template<Side _side> void CancelOrder(uint_fast64_t OldOrderID) {
+        CancelOrder<_side>(OldOrderID);
     }
 
     template<>

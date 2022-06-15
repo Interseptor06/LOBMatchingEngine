@@ -1,6 +1,6 @@
 # ninja log v5
 1311	1389	1652557302606176926	AccountMngmnt_Exchange	4ba9a6de68f7258b
-0	23	1655237734801467181	build.ninja	1f76a45098a2d2b7
+0	23	1655322381035362999	build.ninja	1f76a45098a2d2b7
 0	817	1652557302034178826	CMakeFiles/AccountMngmnt_Exchange.dir/main.cpp.o	f3db13e4895b10ab
 1	550	1652557301766179716	CMakeFiles/AccountMngmnt_Exchange.dir/src/Order.cpp.o	c64a0d9c70d801c0
 0	629	1652557301846179451	CMakeFiles/AccountMngmnt_Exchange.dir/src/Limit.cpp.o	447080e998d62625
